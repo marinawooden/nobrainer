@@ -59,5 +59,8 @@
     color: white;
     width: 500px;
     outline: none;
+    font-family: "Nunito", "Comic Sans MS", sans-serif;
+    font-size: 17px;
+    line-height: 1.5em;
   }
 </style>

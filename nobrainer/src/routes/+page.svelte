@@ -39,9 +39,9 @@
     color: white;
   }
 
-  ::selection {
+  :global(::selection) {
     color: black;
-    background-color: greenyellow;
+    background-color: rgb(47, 99, 255);
   }
 
   #conts {

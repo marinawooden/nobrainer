@@ -2,8 +2,17 @@
 <!-- Behavior -->
 <script>
   export let data;
+  let shouldShowSave = false;
 
-  import { WritingPad } from "$lib";
+  import { WritingPad, SaveBubble } from "$lib";
+
+  function showSave() {
+    shouldShowSave = true;
+    setTimeout(() => {
+      shouldShowSave = false;
+    }, 3000);
+  }
+  
 </script>
 
 <!-- Structure -->
@@ -13,7 +22,13 @@
     <p><small>it just is.</small></p>
   </header>
   <main>
-    <WritingPad defaultText={data?.entry}/>
+    {#if shouldShowSave}
+      <SaveBubble />
+    {/if}
+    <WritingPad
+      defaultText={data?.entry}
+      showSave={showSave}
+    />
   </main>
 </div>
 

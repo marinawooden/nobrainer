@@ -1,6 +1,7 @@
 <!-- Interactivity -->
 <script>
   export let defaultText;
+  export let showSave;
 
   let entryText = defaultText;
   let timerId;
@@ -13,6 +14,8 @@
 
     console.log(entryText);
     window.localStorage.setItem("nobrainer-prevtext", entryText.trim());
+
+    showSave();
   }
 
   function setSaveTimer() {

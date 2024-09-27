@@ -1,0 +1,1 @@
+export { default as WritingPad } from './components/WritingPad.svelte';

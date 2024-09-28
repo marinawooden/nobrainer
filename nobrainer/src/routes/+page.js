@@ -6,8 +6,6 @@ export const ssr = false;
 export function load() {
   let prevEntry = window.localStorage.getItem("nobrainer-prevtext");
 
-  console.log(prevEntry);
-
 	return {
 		"entry": prevEntry
 	};
